@@ -3,11 +3,11 @@ import facebook from '../../assets/images/facebook.svg'
 import instagram from '../../assets/images/instagram.svg'
 import twitter from '../../assets/images/twitter.svg'
 
-import { Container, SocialLink, SocialLinks, Text } from './styles'
+import { Container, Logo, SocialLink, SocialLinks, Text } from './styles'
 
 const Footer = () => (
   <Container>
-    <img src={logo} alt="eFood" />
+    <Logo src={logo} alt="eFood" />
     <SocialLinks>
       <li>
         <SocialLink href="https://www.instagram.com/" target="_blank">
