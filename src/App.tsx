@@ -8,11 +8,11 @@ import Rotas from './routes'
 function App() {
   return (
     <BrowserRouter>
-      <GlobalStyle />
       <div className="container">
+        <GlobalStyle />
         <Rotas />
+        <Footer />
       </div>
-      <Footer />
     </BrowserRouter>
   )
 }

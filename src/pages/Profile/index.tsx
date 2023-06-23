@@ -1,3 +1,5 @@
-const Profile = () => <div>Perfil</div>
+import Header from '../../components/Header'
+
+const Profile = () => <Header />
 
 export default Profile
