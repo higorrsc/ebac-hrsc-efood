@@ -1,19 +1,19 @@
+import { BrowserRouter } from 'react-router-dom'
+
 import { GlobalStyle } from './styles'
 
-import RestaurantList from './containers/RestaurantList'
-import Hero from './components/Hero'
 import Footer from './components/Footer'
+import Rotas from './routes'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle />
       <div className="container">
-        <Hero />
-        <RestaurantList />
-        <Footer />
+        <Rotas />
       </div>
-    </>
+      <Footer />
+    </BrowserRouter>
   )
 }
 

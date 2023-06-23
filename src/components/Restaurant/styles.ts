@@ -8,6 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   color: ${variables.primaryColor};
+  position: relative;
 `
 export const Photo = styled.img`
   max-width: 100%;
@@ -51,4 +52,10 @@ export const Score = styled.div`
   img {
     padding-right: 8px;
   }
+`
+
+export const Tags = styled.div`
+  position: absolute;
+  top: 16px;
+  right: 16px;
 `

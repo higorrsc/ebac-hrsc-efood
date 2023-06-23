@@ -11,13 +11,17 @@ type Props = {
 const ActionButton = ({ type, title, to, onClick, children }: Props) => {
   if (type === 'button') {
     return (
-      <ButtonContainer type="button" title={title} onClick={onClick}>
+      <ButtonContainer title={title} onClick={onClick}>
         {children}
       </ButtonContainer>
     )
   }
 
-  return <ButtonLink title={title}>{children}</ButtonLink>
+  return (
+    <ButtonLink title={title} to={to as string}>
+      {children}
+    </ButtonLink>
+  )
 }
 
 export default ActionButton
