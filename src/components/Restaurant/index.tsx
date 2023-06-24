@@ -48,6 +48,7 @@ const Restaurant = ({
         type="link"
         to={profile === undefined ? '/' : profile}
         title="Saiba mais"
+        kind="primary"
       >
         Saiba mais
       </ActionButton>

@@ -12,7 +12,7 @@ export const Container = styled.header`
 `
 
 export const Logo = styled.img`
-  padding-top: 64px;
+  padding-top: 40px;
 `
 
 export const Title = styled.h1`
