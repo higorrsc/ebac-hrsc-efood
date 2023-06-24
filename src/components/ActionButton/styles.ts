@@ -22,8 +22,8 @@ export const ButtonContainer = styled.button<
   padding: 4px 6px;
   border: none;
   cursor: pointer;
-  margin-top: 16px;
-  margin-bottom: 8px;
+  margin-top: ${(props) => (props.kind === 'primary' ? '16px' : '8px')};
+  margin-bottom: ${(props) => (props.kind === 'primary' ? '8px' : '0')};
 `
 
 export const ButtonLink = styled(Link)<
@@ -43,6 +43,6 @@ export const ButtonLink = styled(Link)<
   padding: 4px 6px;
   text-decoration: none;
   display: inline-block;
-  margin-top: 16px;
-  margin-bottom: 8px;
+  margin-top: ${(props) => (props.kind === 'primary' ? '16px' : '8px')};
+  margin-bottom: ${(props) => (props.kind === 'primary' ? '8px' : '0')};
 `
