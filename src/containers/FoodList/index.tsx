@@ -2,20 +2,20 @@ import { List } from './styles'
 
 import Food from '../../components/Food'
 
-import FoodModel from '../../models/FoodModel'
+import { RestaurantType } from '../../pages/Home'
 
 type Props = {
-  foods: FoodModel[]
+  restaurant: RestaurantType
 }
 
-const FoodList = ({ foods }: Props) => (
+const FoodList = ({ restaurant }: Props) => (
   <List>
-    {foods.map((food) => (
+    {restaurant.cardapio.map((food) => (
       <Food
         key={food.id}
-        photo={food.photo}
-        name={food.name}
-        description={food.description}
+        photo={food.foto}
+        name={food.nome}
+        description={food.descricao}
       />
     ))}
   </List>

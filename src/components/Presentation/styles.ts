@@ -19,6 +19,7 @@ export const FoodImage = styled.div`
   top: 0px;
   right: 0px;
   background-repeat: no-repeat;
+  background-size: cover;
   z-index: -1;
 `
 

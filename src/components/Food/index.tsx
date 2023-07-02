@@ -15,7 +15,7 @@ const Food = ({ photo, name, description }: Props) => (
       <Name>{name}</Name>
       <Description>{description}</Description>
       <ActionButton type="button" kind="secondary" title="Saiba mais">
-        Adicionar ao carrinho
+        Mais detalhes
       </ActionButton>
     </Details>
   </Container>

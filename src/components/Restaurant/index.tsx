@@ -47,7 +47,7 @@ const Restaurant = ({
       <Description>{description}</Description>
       <ActionButton
         type="link"
-        to={`/menu/${id}`}
+        to={`/restaurante/${id}`}
         title="Saiba mais"
         kind="primary"
       >
