@@ -24,6 +24,7 @@ export const Details = styled.div`
   padding-left: 8px;
   padding-right: 8px;
   position: relative;
+  max-width: 100%;
   height: 181px;
 `
 
@@ -37,7 +38,6 @@ export const Description = styled.p`
   font-size: 14px;
   line-height: 22px;
   padding-top: 16px;
-  width: 456px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;

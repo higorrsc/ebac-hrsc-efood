@@ -3,6 +3,15 @@ import { useEffect, useState } from 'react'
 import Hero from '../../components/Hero'
 import RestaurantList from '../../containers/RestaurantList'
 
+export type MenuType = {
+  id: number
+  nome: string
+  descricao: string
+  foto: string
+  preco: number
+  porcao: string
+}
+
 export type RestaurantType = {
   id: number
   titulo: string
@@ -11,6 +20,7 @@ export type RestaurantType = {
   avaliacao: number
   descricao: string
   capa: string
+  cardapio: MenuType[]
 }
 const Home = () => {
   const [restaurantes, setRestaurantes] = useState<RestaurantType[]>([])

@@ -21,14 +21,6 @@ type Props = {
   score: number
   description: string
   photo: string
-  menu?: {
-    id: number
-    title: string
-    description: string
-    photo: string
-    price: number
-    portion: string
-  }
 }
 
 const Restaurant = ({
