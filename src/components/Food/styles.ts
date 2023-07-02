@@ -14,12 +14,14 @@ export const Photo = styled.img`
   width: 100%;
   height: 167px;
   object-fit: cover;
+  border-radius: 8px;
 `
 
 export const Details = styled.div`
   border-right: 1px solid ${variables.primaryColor};
   border-bottom: 1px solid ${variables.primaryColor};
   border-left: 1px solid ${variables.primaryColor};
+  border-radius: 8px;
   background-color: ${variables.primaryColor};
   padding: 8px;
 
