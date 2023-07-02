@@ -11,7 +11,9 @@ export const Container = styled.div`
   position: relative;
 `
 export const Photo = styled.img`
-  max-width: 100%;
+  width: 100%;
+  height: 217px;
+  object-fit: cover;
 `
 
 export const Details = styled.div`
@@ -22,6 +24,7 @@ export const Details = styled.div`
   padding-left: 8px;
   padding-right: 8px;
   position: relative;
+  height: 181px;
 `
 
 export const Name = styled.h3`
@@ -34,6 +37,11 @@ export const Description = styled.p`
   font-size: 14px;
   line-height: 22px;
   padding-top: 16px;
+  width: 456px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 `
 
 export const Score = styled.div`

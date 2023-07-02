@@ -52,7 +52,7 @@ const comidas: FoodModel[] = [
   }
 ]
 
-const Profile = () => (
+const Menu = () => (
   <>
     <Header />
     <Presentation
@@ -65,4 +65,4 @@ const Profile = () => (
   </>
 )
 
-export default Profile
+export default Menu

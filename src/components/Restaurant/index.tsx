@@ -14,31 +14,40 @@ import {
 } from './styles'
 
 type Props = {
-  photo: string
-  name: string
-  score: string
+  id: number
+  title: string
+  highlighted: boolean
+  kind: string
+  score: number
   description: string
-  infos: string[]
-  profile?: string
+  photo: string
+  menu?: {
+    id: number
+    title: string
+    description: string
+    photo: string
+    price: number
+    portion: string
+  }
 }
 
 const Restaurant = ({
-  photo,
-  name,
+  id,
+  title,
+  highlighted,
+  kind,
   score,
   description,
-  infos,
-  profile
+  photo
 }: Props) => (
   <Container>
     <Photo src={photo} alt="" />
     <Tags>
-      {infos.map((info) => (
-        <Tag key={info}>{info}</Tag>
-      ))}
+      {highlighted && <Tag>Destaque</Tag>}
+      <Tag key={kind}>{kind}</Tag>
     </Tags>
     <Details>
-      <Name>{name}</Name>
+      <Name>{title}</Name>
       <Score>
         <p>{score}</p>
         <img src={estrela} alt="" />
@@ -46,7 +55,7 @@ const Restaurant = ({
       <Description>{description}</Description>
       <ActionButton
         type="link"
-        to={profile === undefined ? '/' : profile}
+        to={`/menu/${id}`}
         title="Saiba mais"
         kind="primary"
       >

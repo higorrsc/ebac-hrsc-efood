@@ -2,10 +2,10 @@ import { List } from './styles'
 
 import Restaurant from '../../components/Restaurant'
 
-import RestaurantModel from '../../models/RestaurantModel'
+import { RestaurantType } from '../../pages/Home'
 
 type Props = {
-  restaurants: RestaurantModel[]
+  restaurants: RestaurantType[]
 }
 
 const RestaurantList = ({ restaurants }: Props) => (
@@ -13,12 +13,13 @@ const RestaurantList = ({ restaurants }: Props) => (
     {restaurants.map((restaurant) => (
       <Restaurant
         key={restaurant.id}
-        photo={restaurant.photo}
-        name={restaurant.name}
-        score={restaurant.score}
-        description={restaurant.description}
-        infos={restaurant.infos}
-        profile={restaurant.profile}
+        id={restaurant.id}
+        title={restaurant.titulo}
+        highlighted={restaurant.destacado}
+        kind={restaurant.tipo}
+        score={restaurant.avaliacao}
+        description={restaurant.descricao}
+        photo={restaurant.capa}
       />
     ))}
   </List>
