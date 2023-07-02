@@ -111,6 +111,6 @@ export const ModalContent = styled.div`
   }
 
   ${ButtonContainer} {
-    max-width: 250px;
+    max-width: 218px;
   }
 `
