@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Hero from '../../components/Hero'
 import RestaurantList from '../../containers/RestaurantList'
 
-export type MenuType = {
+export interface MenuType {
   id: number
   nome: string
   descricao: string
