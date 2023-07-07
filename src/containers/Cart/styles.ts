@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import variables from '../../styles/variables'
+import { ButtonContainer } from '../../components/ActionButton/styles'
 
 export const OverLay = styled.div`
   position: absolute;
@@ -15,9 +16,14 @@ export const OverLay = styled.div`
 export const Sidebar = styled.aside`
   background-color: ${variables.primaryColor};
   z-index: 1;
-  padding: 40px 16px 0 16px;
+  padding-top: 16px;
   max-width: 360px;
   width: 100%;
+
+  ${ButtonContainer} {
+    margin-left: 8px;
+    width: 344px;
+  }
 `
 
 export const CartContainer = styled.div`
@@ -33,4 +39,13 @@ export const CartContainer = styled.div`
   &.is-open {
     display: flex;
   }
+`
+
+export const TotalContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 8px 8px 8px;
+  color: ${variables.secondaryColor};
+  font-size: 14px;
+  font-weight: 700;
 `

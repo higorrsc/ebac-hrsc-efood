@@ -1,3 +1,4 @@
+import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 
 import ActionButton from '../ActionButton'
@@ -16,12 +17,21 @@ import { MenuType } from '../../pages/Home'
 
 import closebutton from '../../assets/images/closebutton.svg'
 
+import { add, open } from '../../store/reducers/cart'
+
 type Props = {
   option: MenuType
 }
 
 interface ModalState extends MenuType {
   isVisible: boolean
+}
+
+export const priceFormat = (preco = 0) => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(preco)
 }
 
 const Food = ({ option }: Props) => {
@@ -47,11 +57,12 @@ const Food = ({ option }: Props) => {
     })
   }
 
-  const priceFormat = (preco = 0) => {
-    return new Intl.NumberFormat('pt-BR', {
-      style: 'currency',
-      currency: 'BRL'
-    }).format(preco)
+  const dispatch = useDispatch()
+
+  const addFoodToCart = () => {
+    dispatch(add(option))
+    dispatch(open())
+    closeModal()
   }
 
   return (
@@ -102,6 +113,7 @@ const Food = ({ option }: Props) => {
               type="button"
               kind="secondary"
               title="Adicionar ao carrinho"
+              onClick={addFoodToCart}
             >
               {`Adicionar ao carrinho - ${priceFormat(option.preco)}`}
             </ActionButton>
