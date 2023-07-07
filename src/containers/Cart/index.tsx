@@ -31,12 +31,14 @@ const Cart = () => {
           <CartItem key={item.id} item={item} />
         ))}
         <TotalContainer>
-          <p>Valor total</p>
-          <p>{priceFormat(getTotalCartValue())}</p>
+          <div className="total-price">
+            <p>Valor total</p>
+            <p>{priceFormat(getTotalCartValue())}</p>
+          </div>
+          <ActionButton kind="secondary" type="button" title="Continuar">
+            Continuar com a entrega
+          </ActionButton>
         </TotalContainer>
-        <ActionButton kind="secondary" type="button" title="Continuar">
-          Continuar com a entrega
-        </ActionButton>
       </Sidebar>
     </CartContainer>
   )

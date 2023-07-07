@@ -13,4 +13,8 @@ export const Container = styled.header`
   color: ${variables.primaryColor};
   padding-top: 40px;
   padding-bottom: 64px;
+
+  p {
+    cursor: pointer;
+  }
 `
