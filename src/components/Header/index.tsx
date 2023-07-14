@@ -9,12 +9,12 @@ import logo from '../../assets/images/logo.svg'
 import background from '../../assets/images/vector.png'
 
 const Header = () => {
-  const dispath = useDispatch()
+  const dispatch = useDispatch()
 
   const { items } = useSelector((state: RootReducer) => state.cart)
 
   const openCart = () => {
-    dispath(open())
+    if (items.length !== 0) dispatch(open())
   }
 
   return (

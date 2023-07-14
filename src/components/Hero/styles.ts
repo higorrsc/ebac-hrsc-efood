@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import variables from '../../styles/variables'
+import { color } from '../../styles'
 
 export const Container = styled.header`
   width: 100%;
@@ -19,7 +19,7 @@ export const Title = styled.h1`
   font-size: 36px;
   font-weight: 900;
   max-width: 540px;
-  color: ${variables.primaryColor};
+  color: ${color.primaryColor};
   text-align: center;
   padding-top: 138px;
   padding-bottom: 40px;

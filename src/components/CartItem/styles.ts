@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import variables from '../../styles/variables'
+import { color } from '../../styles'
 
 export const Container = styled.div`
   display: flex;
   width: 344px;
   height: 100px;
-  background-color: ${variables.secondaryColor};
-  color: ${variables.primaryColor};
+  background-color: ${color.secondaryColor};
+  color: ${color.primaryColor};
   padding: 8px 8px 12px 8px;
   margin: 16px 8px;
   position: relative;

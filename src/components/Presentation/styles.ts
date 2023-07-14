@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import variables from '../../styles/variables'
+import { color } from '../../styles'
 
 export const Container = styled.div`
   width: 100%;
@@ -9,7 +9,7 @@ export const Container = styled.div`
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 32px;
-  color: ${variables.defaultWhite};
+  color: ${color.defaultWhite};
 `
 
 export const FoodImage = styled.div`

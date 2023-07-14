@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-import variables from '../../styles/variables'
+import { color } from '../../styles'
 
 export const Container = styled.div`
   width: 472px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: ${variables.primaryColor};
+  color: ${color.primaryColor};
   position: relative;
 `
 export const Photo = styled.img`
@@ -17,10 +17,10 @@ export const Photo = styled.img`
 `
 
 export const Details = styled.div`
-  border-right: 1px solid ${variables.primaryColor};
-  border-bottom: 1px solid ${variables.primaryColor};
-  border-left: 1px solid ${variables.primaryColor};
-  background-color: ${variables.defaultWhite};
+  border-right: 1px solid ${color.primaryColor};
+  border-bottom: 1px solid ${color.primaryColor};
+  border-left: 1px solid ${color.primaryColor};
+  background-color: ${color.defaultWhite};
   padding-left: 8px;
   padding-right: 8px;
   position: relative;

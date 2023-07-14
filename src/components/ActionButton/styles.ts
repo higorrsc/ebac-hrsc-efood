@@ -3,19 +3,15 @@ import { Link } from 'react-router-dom'
 
 import { Props } from '.'
 
-import variables from '../../styles/variables'
+import { color } from '../../styles'
 
 export const ButtonContainer = styled.button<
   Omit<Props, 'type' | 'title' | 'to' | 'onClick' | 'children'>
 >`
   background-color: ${(props) =>
-    props.kind === 'primary'
-      ? variables.primaryColor
-      : variables.secondaryColor};
+    props.kind === 'primary' ? color.primaryColor : color.secondaryColor};
   color: ${(props) =>
-    props.kind === 'primary'
-      ? variables.secondaryColor
-      : variables.primaryColor};
+    props.kind === 'primary' ? color.secondaryColor : color.primaryColor};
   width: ${(props) => (props.kind === 'primary' ? 'auto' : '100%')};
   font-size: 14px;
   font-weight: bold;
@@ -30,13 +26,9 @@ export const ButtonLink = styled(Link)<
   Omit<Props, 'type' | 'title' | 'to' | 'onClick' | 'children'>
 >`
   background-color: ${(props) =>
-    props.kind === 'primary'
-      ? variables.primaryColor
-      : variables.secondaryColor};
+    props.kind === 'primary' ? color.primaryColor : color.secondaryColor};
   color: ${(props) =>
-    props.kind === 'primary'
-      ? variables.secondaryColor
-      : variables.primaryColor};
+    props.kind === 'primary' ? color.secondaryColor : color.primaryColor};
   width: ${(props) => (props.kind === 'primary' ? 'auto' : '100%')};
   font-size: 14px;
   font-weight: bold;

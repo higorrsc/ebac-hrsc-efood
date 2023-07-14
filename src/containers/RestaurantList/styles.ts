@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import variables from '../../styles/variables'
+import { color } from '../../styles'
 
 export const List = styled.main`
-  background-color: ${variables.tertiaryColor};
+  background-color: ${color.tertiaryColor};
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr;

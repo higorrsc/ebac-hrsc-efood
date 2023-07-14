@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-import variables from '../../styles/variables'
+import { color } from '../../styles'
 
 export const Container = styled.div`
-  background-color: ${variables.primaryColor};
-  color: ${variables.secondaryColor};
+  background-color: ${color.primaryColor};
+  color: ${color.secondaryColor};
   font-size: 12px;
   font-weight: bold;
   padding: 6px 4px;

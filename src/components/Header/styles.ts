@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import variables from '../../styles/variables'
+import { color } from '../../styles'
 
 export const Container = styled.header`
   width: 100%;
@@ -10,7 +10,7 @@ export const Container = styled.header`
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
-  color: ${variables.primaryColor};
+  color: ${color.primaryColor};
   padding-top: 40px;
   padding-bottom: 64px;
 

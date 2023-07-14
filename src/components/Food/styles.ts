@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import variables from '../../styles/variables'
+import { color } from '../../styles'
 import { ButtonContainer } from '../ActionButton/styles'
 
 export const Container = styled.div`
@@ -8,7 +8,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: ${variables.secondaryColor};
+  color: ${color.secondaryColor};
 `
 export const Photo = styled.img`
   width: 100%;
@@ -18,11 +18,11 @@ export const Photo = styled.img`
 `
 
 export const Details = styled.div`
-  border-right: 1px solid ${variables.primaryColor};
-  border-bottom: 1px solid ${variables.primaryColor};
-  border-left: 1px solid ${variables.primaryColor};
+  border-right: 1px solid ${color.primaryColor};
+  border-bottom: 1px solid ${color.primaryColor};
+  border-left: 1px solid ${color.primaryColor};
   border-radius: 8px;
-  background-color: ${variables.primaryColor};
+  background-color: ${color.primaryColor};
   padding: 8px;
 
   position: relative;
@@ -75,8 +75,8 @@ export const ModalContent = styled.div`
   height: 344px;
   position: relative;
   z-index: 1;
-  background-color: ${variables.primaryColor};
-  color: ${variables.defaultWhite};
+  background-color: ${color.primaryColor};
+  color: ${color.defaultWhite};
   padding-right: 32px;
 
   display: grid;

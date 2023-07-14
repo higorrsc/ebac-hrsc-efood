@@ -1,6 +1,7 @@
 import { useGetRestaurantsQuery } from '../../services/api'
 
 import Hero from '../../components/Hero'
+import Loader from '../../components/Loader'
 import RestaurantList from '../../containers/RestaurantList'
 
 export interface MenuType {
@@ -23,17 +24,18 @@ export type RestaurantType = {
   cardapio: MenuType[]
 }
 const Home = () => {
-  const { data } = useGetRestaurantsQuery()
+  const { data, isLoading } = useGetRestaurantsQuery()
 
-  if (data) {
-    return (
-      <>
-        <Hero />
-        <RestaurantList restaurants={data} />
-      </>
-    )
+  if (isLoading) {
+    return <Loader />
   }
-  return <h4>Carregando...</h4>
+
+  return (
+    <>
+      <Hero />
+      <RestaurantList restaurants={data!} />
+    </>
+  )
 }
 
 export default Home

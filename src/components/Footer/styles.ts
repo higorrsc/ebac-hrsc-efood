@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import variables from '../../styles/variables'
+import { color } from '../../styles'
 
 export const Container = styled.footer`
-  background-color: ${variables.secondaryColor};
+  background-color: ${color.secondaryColor};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@ export const Container = styled.footer`
 `
 
 export const Text = styled.p`
-  color: ${variables.primaryColor};
+  color: ${color.primaryColor};
   font-size: 10px;
   padding-top: 80px;
   padding-bottom: 40px;

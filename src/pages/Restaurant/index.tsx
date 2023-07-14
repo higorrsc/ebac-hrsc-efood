@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 import Header from '../../components/Header'
+import Loader from '../../components/Loader'
 import Presentation from '../../components/Presentation'
 
 import FoodList from '../../containers/FoodList'
@@ -20,7 +21,7 @@ const Restaurant = () => {
   }, [id])
 
   if (!restaurant) {
-    return <h3>Carregando...</h3>
+    return <Loader />
   }
 
   return (
