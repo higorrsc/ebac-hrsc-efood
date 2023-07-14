@@ -1,5 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
+export const color = {
+  primaryColor: '#E66767',
+  secondaryColor: '#FFEBD9',
+  tertiaryColor: '#FFF8F2',
+  defaultWhite: '#FFF',
+  defaultBlack: '#000',
+  formTextColor: '#4B4B4B'
+}
+
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
